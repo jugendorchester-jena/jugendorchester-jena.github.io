@@ -27,3 +27,6 @@ repository: "jugendorchester-jena/jugendorchester-jena.github.io"
 
 # Build settings
 markdown: kramdown
+exclude: ["*.less"]
+kramdown:
+  smart_quotes: ["lsquo", "rsquo", "bdquo", "ldquo"]

@@ -4,7 +4,7 @@ layout: default
 
     {% for post in site.posts %}
       <article class="post">
-        <h2 class="post_title"><a href="{{ post.url | prepend: full_base_url }}">{{ post.title | escape }}</a></h2>
+        <h2 class="post-title"><a href="{{ post.url | prepend: full_base_url }}">{{ post.title | escape }}</a></h2>
         
         {{ post.content }}
       </article>

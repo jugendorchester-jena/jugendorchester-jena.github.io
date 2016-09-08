@@ -1,16 +1,20 @@
-<header class="site-header" role="banner">
+<header id="site-header" role="banner">
 
-  <h1 id="title">{{ site.title_markup }}</h1>
+    <a href="/"><h1 id="title">{{ site.title_markup }}</h1></a>
 
-  <nav class="site-nav">
-
-    <ul>
-      {% for my_page in site.pages %}
-        {% if my_page.title %}
-        <li><a href="{{ my_page.url | prepend: full_base_url }}">{{ my_page.title | escape }}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </nav>
+    <nav class="site-nav">
+        <ul>
+            {% assign nav_sites = "About" | split: ", " %}
+            {% for my_page in site.pages %}
+                {% if my_page.title and nav_sites | contains: my_page.title %}
+                    {% if my_page.url == page.url %}
+                        <li><span class="sitename">{{ my_page.title | escape }}</span></li>
+                    {% else %}
+                        <li><a class="sitename" href="{{ my_page.url | prepend: full_base_url }}">{{ my_page.title | escape }}</a></li>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
 
 </header>

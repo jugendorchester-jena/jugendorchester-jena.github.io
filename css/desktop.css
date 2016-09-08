@@ -26,26 +26,17 @@ body {
     background-size: 1200px;
   }
 }
-#background {
-  transform: translateZ(-1px);
-  position: absolute;
-  top: -50vh;
-  right: -50vw;
-  bottom: -50vh;
-  left: -50vw;
-  background-color: red;
-  z-index: -1;
-  box-sizing: border-box;
-  border: 5px solid green;
-}
-header {
+#site-header {
   width: 400px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 120px;
   margin-bottom: 40px;
 }
-header h1 {
+#site-header a {
+  text-decoration: none;
+}
+#site-header h1 {
   font-family: Martel, serif;
   font-weight: 200;
   font-size: 35px;
@@ -57,15 +48,15 @@ header h1 {
   padding: 20px;
   width: 360px;
 }
-header h1:first-letter {
+#site-header h1:first-letter {
   font-size: 110%;
 }
-header h1 .subtitle {
+#site-header h1 .subtitle {
   display: block;
   font-size: 50%;
   font-weight: 300;
 }
-nav ul {
+#site-header nav ul {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -73,18 +64,29 @@ nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: 30px;
 }
-nav ul li {
+#site-header nav ul li {
   display: block;
   list-style-type: none;
 }
-nav ul li a {
+#site-header nav ul li .sitename {
   padding: 8px 10px 6px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.35);
-  color: rgba(255, 255, 255, 0.75);
   font-family: Martel, serif;
   font-weight: 500;
+}
+#site-header nav ul li a.sitename {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(0, 0, 0, 0.35);
+}
+#site-header nav ul li a.sitename:hover {
+  text-decoration: underline;
+}
+#site-header nav ul li span.sitename {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .post {
   padding: 20px;
@@ -96,14 +98,20 @@ nav ul li a {
   margin-left: auto;
   margin-right: auto;
 }
-.post .post_title {
+.post .post-title {
   font-family: Asul, serif;
   margin-bottom: 5px;
   color: rgba(0, 0, 0, 0.8);
 }
-.post .post_title:hover {
-  color: rgba(0, 0, 0, 0.9);
+.post .post-title a {
+  text-decoration: none;
+  color: inherit;
+}
+.post .post-title a:hover {
   text-decoration: underline;
+}
+.post .post-title a:hover {
+  color: rgba(0, 0, 0, 0.9);
 }
 .post p {
   font-family: Martel, serif;
@@ -133,4 +141,13 @@ nav ul li a {
   box-sizing: border-box;
   margin-top: 0px;
   text-align: center;
+}
+a {
+  text-decoration: underline;
+}
+a:link {
+  color: rgba(0, 0, 0, 0.7);
+}
+a:visited {
+  color: rgba(0, 0, 0, 0.5);
 }
