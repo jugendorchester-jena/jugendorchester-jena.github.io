@@ -30,3 +30,5 @@ markdown: kramdown
 exclude: ["*.less"]
 kramdown:
   smart_quotes: ["lsquo", "rsquo", "bdquo", "ldquo"]
+gems:
+  - jekyll-sitemap

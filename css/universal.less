@@ -22,9 +22,9 @@ body {
   perspective: 1px;
 }
 
-@media (max-width: 1200px) and (max-height: 797px) {
+@media (max-width: 1400px) and (max-height: 930px) {
   body {
-    background-size: 1200px;
+    background-size: 1400px;
   }
 }
 
@@ -98,15 +98,30 @@ body {
 .post {
   .box();
 
-  .post-title {
-    font-family: Asul, serif;
-    margin-bottom: 5px;
-    color: rgba(0, 0, 0, .8);
-    a {
-      .hiddenlink();
-      &:hover {
-        color: rgba(0, 0, 0, .9);
+  .post-header {
+    display: flex;
+    flex-direction: row;
+
+    .post-title {
+      flex-grow: 1;
+
+      font-family: Asul, serif;
+      margin-bottom: 5px;
+      color: rgba(0, 0, 0, .8);
+      a {
+        .hiddenlink();
+        &:hover {
+          color: rgba(0, 0, 0, .9);
+        }
+        width: 100%;
+        display: block;
       }
+    }
+
+    .post-meta {
+      flex-grow: 0;
+      text-align: right;
+      opacity: .7;
     }
   }
 
@@ -152,6 +167,10 @@ a:link {
 
 a:visited {
   color: rgba(0, 0, 0, .5);
+}
+
+a:hover {
+  color: rgba(0, 0, 0, .9);
 }
 
 .centered(@width: @centered-width) {

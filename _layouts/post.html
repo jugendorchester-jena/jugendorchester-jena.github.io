@@ -1,9 +1,4 @@
 ---
 layout: default
 ---
-<article class="post">
-
-  <h2 class="post-title">{{ page.title | escape }}</h2>
-  
-  {{ content }}
-</article>
+{% include post.html post=page %}

@@ -1,0 +1,23 @@
+{% assign currentpost = include.post %}
+{% assign postcontent = include.content | default: currentpost.content %}
+<article class="post">
+    <header class="post-header">
+        <h2 class="post-title">
+            {% if currentpost == page %}
+                {{ currentpost.title | escape }}
+            {% else %}
+                <a href="{{ currentpost.url | prepend: full_base_url }}">{{ currentpost.title | escape }}</a>
+            {% endif %}
+        </h2>
+        <p class="post-meta">
+            {% if currentpost.date %}
+                am&nbsp<time datetime="{{ currentpost.date | date_to_xmlschema }}" itemprop="datePublished">{{ currentpost.date | date: "%-d.&nbsp;%-m.&nbsp;%Y" }}</time>
+            {% endif %}
+            {% if currentpost.author %}
+                von&nbsp;{{ currentpost.author }}
+            {% endif %}
+        </p>
+    </header>
+
+    {{ postcontent }}
+</article>
