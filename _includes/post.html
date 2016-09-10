@@ -14,7 +14,7 @@
                 am&nbsp<time datetime="{{ currentpost.date | date_to_xmlschema }}" itemprop="datePublished">{{ currentpost.date | date: "%-d.&nbsp;%-m.&nbsp;%Y" }}</time>
             {% endif %}
             {% if currentpost.author %}
-                von&nbsp;{{ currentpost.author }}
+                von&nbsp;{{ currentpost.author | replace: " ", "&nbsp;" }}
             {% endif %}
         </p>
     </header>
