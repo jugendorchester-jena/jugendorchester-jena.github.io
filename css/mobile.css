@@ -6,7 +6,7 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) top / 100% fixed, url("jugendorchester_dark_720.jpg") center / cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) top / 100% fixed, url("jugendorchester_dark_720.jpg") top / cover;
   overflow: hidden;
 }
 #site-header h1 {
@@ -38,7 +38,7 @@ body {
 }
 @media (min-width: 721px) {
   #site-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) top / 100% fixed, url("jugendorchester_dark_1080.jpg") center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) top / 100% fixed, url("jugendorchester_dark_1080.jpg") top / cover;
   }
 }
 * {
