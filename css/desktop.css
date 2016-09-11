@@ -1,6 +1,6 @@
 /* must not output CSS! (output must be empty) */
 body {
-  background: url("jugendorchester_dark.png") top / cover fixed;
+  background: url("jugendorchester_dark.jpg") top / cover fixed;
   padding: 1px 0px 80px;
 }
 @media (max-width: 1400px) and (max-height: 930px) {
@@ -92,6 +92,7 @@ body {
 #site-header nav ul li span.sitename {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
 }
 .post {
   padding: 20px;

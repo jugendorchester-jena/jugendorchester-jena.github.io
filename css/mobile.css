@@ -6,7 +6,7 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: url("jugendorchester_dark.png") center / cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) top / 100% fixed, url("jugendorchester_dark_720.jpg") center / cover;
   overflow: hidden;
 }
 #site-header h1 {
@@ -34,6 +34,11 @@ body {
     font-size: 10vw !important;
     padding-left: 5.71428571vw !important;
     padding-right: 5.71428571vw !important;
+  }
+}
+@media (min-width: 721px) {
+  #site-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) top / 100% fixed, url("jugendorchester_dark_1080.jpg") center / cover;
   }
 }
 * {
@@ -92,14 +97,15 @@ body {
 #site-header nav ul li a.sitename {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.75);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 #site-header nav ul li a.sitename:hover {
   text-decoration: underline;
 }
 #site-header nav ul li span.sitename {
   color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
 }
 .post {
   padding: 18px 20px 20px;
